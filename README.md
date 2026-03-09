@@ -146,8 +146,7 @@ streamlit run app_metrics.py
 ---
 
 ## 📄 Research Paper
-
-IEEE paper available in `Paper/`  
+  
 Final report in `Final paper/`
 
 ---
