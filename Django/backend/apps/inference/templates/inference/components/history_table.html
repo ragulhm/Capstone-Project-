@@ -1,0 +1,43 @@
+<div class="card shadow-sm">
+    <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="h5 mb-0">Detection History</h2>
+            <span class="badge text-bg-light">Latest 10</span>
+        </div>
+
+        {% if history %}
+            <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr>
+                            <th>Text</th>
+                            <th>Model</th>
+                            <th>Score</th>
+                            <th>Is Bot</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in history %}
+                            <tr>
+                                <td class="text-truncate" style="max-width: 420px;">{{ item.text }}</td>
+                                <td>{{ item.model_used }}</td>
+                                <td>{{ item.prediction|floatformat:4 }}</td>
+                                <td>
+                                    {% if item.is_bot %}
+                                        <span class="badge text-bg-danger">Yes</span>
+                                    {% else %}
+                                        <span class="badge text-bg-success">No</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ item.created_at|date:'Y-m-d H:i' }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p class="text-muted mb-0">No detection history yet.</p>
+        {% endif %}
+    </div>
+</div>

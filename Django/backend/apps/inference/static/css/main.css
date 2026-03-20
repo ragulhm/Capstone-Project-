@@ -1,0 +1,35 @@
+:root {
+    --app-bg: #f5f7fb;
+    --card-border: #e7ebf3;
+}
+
+.app-body {
+    background: radial-gradient(circle at top right, #eef3ff 0%, #f7f9fc 45%, #f5f7fb 100%);
+    min-height: 100vh;
+}
+
+.metric-card {
+    border: 1px solid var(--card-border);
+    border-radius: 0.75rem;
+    background: #fff;
+    padding: 1rem;
+}
+
+.metric-label {
+    color: #6c757d;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.metric-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0.35rem;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
