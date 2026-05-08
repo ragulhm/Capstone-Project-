@@ -2,7 +2,6 @@
 Django==4.2.0
 djangorestframework==3.14.0
 django-cors-headers==4.0.0
-
 # Machine Learning
 torch==2.0.0
 transformers==4.30.0
