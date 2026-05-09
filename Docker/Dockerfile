@@ -21,9 +21,7 @@ RUN python manage.py collectstatic --noinput 2>/dev/null || true
 RUN mkdir -p /app/logs
 
 EXPOSE 8000
-
 # ---------- Runtime targets ----------
-
 # Default: Gunicorn web server
 CMD ["gunicorn", "config.wsgi:application", \
      "--bind", "0.0.0.0:8000", \
