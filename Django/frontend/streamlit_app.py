@@ -1,5 +1,5 @@
 """
-Streamlit frontend for bot detection system.
+Streamlit frontend for bot detection system
 """
 import streamlit as st
 import requests
