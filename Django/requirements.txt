@@ -16,6 +16,7 @@ requests==2.31.0
 
 # Database
 psycopg2-binary==2.9.6
+
 # or use sqlite3 (comes with Python)
 
 # Utilities
